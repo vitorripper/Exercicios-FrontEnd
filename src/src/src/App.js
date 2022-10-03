@@ -1,5 +1,6 @@
 import style from './App.css';
 import {useState} from 'react'
+import imc from './imc_foto.jpg'
 function App() {
   const [valor, setValor] = useState()
   const [resultado, setResultado] = useState({
@@ -37,17 +38,19 @@ function App() {
   }
   return (
     <div className='imc'>
+
+      
       <form onSubmit={analisar}>
 
         <header className='Titulo'>
           <h1>
-            Análise Imc
+            Análise IMC
           </h1>
         </header>
 
         <div className='entrada'>
           <label>
-            Imc:
+            IMC:
           </label>
 
           <input placeholder='Informe o valor do IMC' value={valor} onChange={(evento) => setValor(evento.target.value)}>
@@ -61,9 +64,10 @@ function App() {
 
         <div className='resultado'>
           <label>
-            Resultado: {resultado.valorImc}
+            <strong>Resultado: {resultado.valorImc}</strong>
           </label>
         </div>
+        <p>&copy;vitorripper&marcosrosa</p>
 
       </form>
 
