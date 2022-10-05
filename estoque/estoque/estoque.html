@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estoque</title>
+    <link rel="stylesheet" href="estoque.css">
+</head>
+<body>
+    <div>
+        
+        <div>
+            <header>
+                <h1>Produtos</h1>
+            </header>
+        
+            <div>
+                <label>
+                    Nome dos Produtos:
+                </label>
+
+                <select class = "produtos">
+                    <option value="" disabled selected>Selecione...</option>
+                    <option value=0>Celular</option>
+                    <option value=1>Notebook</option>
+                    <option value=2>Teclado</option>
+                    <option value=3>Mouse</option>
+                    <option value=4>Monitor</option>
+                    <option value=5>Mousepad</option>
+                    <option value=6>Óculos</option>
+                    <option value=7>Impressora</option>
+                    <option value=8>Câmera</option>
+                    <option value=9>Fone</option>
+                </select>
+
+            </div>
+            
+            <br/>
+
+            <div>
+                <label>
+                    Quantidades:
+                </label>
+
+                <input class="qtd" type="number">
+            </div>
+            
+            <br/>
+
+            <button id="botao" onClick="botao()">Analisar</button>
+
+            <br/>
+
+        </div>
+
+
+        <div>
+            
+            <span class="ps" >Produto Selecionado: </span>
+            <br/>
+            <span class="es" >Estoque do produto: </span>
+            <br/>
+            <span class="vp">Valor do Produto: </span>
+            <br/>
+            <span class="vt">Valor Total da Compra: </span>
+        </div>
+
+        <p>&copy;vitorripper&marcosrosa</p>
+    </div>
+    
+    
+    <script src="estoque.js"></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 2</title>
+</head>
+<body>
+    <h1>Loja PWA107</h1>
+
+    <p>Nome do produto</p>
+
+    <select class="Roupas">
+        <option value=0>Camisa</option>
+        <option value=1>Calça</option>
+        <option value=2>Jaqueta</option>
+        <option value=3>Ocúlos</option>
+        <option value=4>Luvas</option>
+        <option value=5>Blusa</option>
+        <option value=6>Sapato</option>
+        <option value=7>Meias</option>
+        <option value=8>Tênis</option>
+        <option value=9>Aneis</option>
+
+
+
+
+    </select>
+    <br><br/>
+    <p>Quantidade do produto</p>
+    <input type="text" class="caixa">
+    <br><br/>
+    <button id="butao" onclick="botao()">Confirmar</button>
+
+    <h2 class="texto">Valor da compra: </h2>
+
+</body>
+<script>
+const quantidade=[3,10,9,8,2,0,8,5,4,2]
+const preco =[15.0, 20.0 , 50.0, 10.0, 10.0, 15.0, 50.0, 6.0, 80.0, 3.0];
+var caixa;
+var posicao;
+var valor;
+var title = document.querySelector(".texto");
+
+
+   function botao(){
+
+
+      caixa= document.querySelector(".caixa").value;
+      posicao= document.querySelector(".Roupas").value;
+
+      if(caixa>quantidade[posicao]){
+
+        title.innerHTML="Produto sem estoque";
+
+      }
+      else{
+
+        valor= parseInt(caixa)*preco[posicao];
+
+        title.innerHTML="Valor da compra: "+valor;
+
+
+      }
+
+
+   }
+</script>
+</html>
